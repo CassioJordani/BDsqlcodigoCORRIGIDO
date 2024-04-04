@@ -57,7 +57,7 @@ CREATE TABLE invoices
   credit_total          DECIMAL(9,2)   NOT NULL      DEFAULT 0,
   terms_id              INT            NOT NULL,
   invoice_due_date      DATE           NOT NULL,
-  payment_date          DATE,
+  payment_date          DATE           NOT NULL,
   CONSTRAINT invoices_fk_vendors
     FOREIGN KEY (vendor_id)
     REFERENCES vendors (vendor_id),
